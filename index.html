@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+    <style>
+
+        *
+        {
+            box-sizing: border-box;
+        }
+        body
+        {
+            display: flex;
+            justify-content: center;
+            margin-top: 2%;
+        }
+
+        .container{
+            background-color: lightblue;
+            width: 90vw;
+            height: 90vh;
+            border-radius: 10px;
+            border: 3px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #container_child
+        {
+
+            height: 80vh;
+            width: 80vw;
+            background-color: aqua;
+            text-align: center;
+            border-radius: 10px;
+            border: 10px double white;
+        
+        }
+
+        h1{
+            font-size: 3rem;
+        }
+
+        hr{
+               margin-bottom: 10vh;
+               border: 5px solid white;
+            }
+
+        h2
+        {
+            margin-bottom: -45px;
+        }
+
+        button
+        {
+            height: 8vh;
+            margin:50px;
+            border-radius: 10px;
+            border: none;
+            background-color: white;
+            font-size: 1rem;
+            font-family:'Times New Roman', Times, serif;
+            font-weight: bolder;
+        }
+
+        button:hover
+        {
+            background-color: black;
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-style: italic;
+            
+        }
+
+        @media(max-width:600px)
+        {
+            body{
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+            }
+
+            .container
+            {
+                background-color: cornflowerblue;
+                width: 100vw;
+                height: 100vh;
+            }
+
+            #container_child
+            {
+                height: 98vh;
+                width: 98vw;
+                background-color: rgb(33, 135, 230);
+            }
+
+            h1
+            {
+                font-size: 6vw;
+                
+            }
+
+            hr{
+               margin-bottom: 10vh;
+               border: 5px solid white;
+            }
+
+        }
+
+    </style>
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <div id="container_child">
+            <h1>Welcome To Inner Circle Bank</h1><hr>
+            <h2>Create New User</h2>
+            <button onclick="window.location.href = 'create.html'">Create Account</button><br>
+            <h2>Login Existing User</h2>
+            <button onclick="window.location.href = 'login.html'">Login User</button>
+        </div>
+    </div>
+
+</body>
+</html>
