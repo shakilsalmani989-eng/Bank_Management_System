@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Balance</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+
+    <div class="balance_container">
+        <div class="balance_first_child">
+            <h2>Your Current Balance</h2>
+            <div class="balance_second_child">
+                <h1 id="name"></h1>
+                <h1 id="balance"></h1>
+            </div>
+            <button id="balancebtn" onclick="window.location.href = 'UserDashboard.html'">Back</button>
+        </div>
+    </div>
+
+    <script>
+        let check = JSON.parse(localStorage.getItem("loginuser"));
+        document.getElementById("balance").innerHTML += "Hello, " + check.fname+"<br>"+check.lname + "<br><hr>Your Balance<br>" +check.balance;
+    </script>
+</body>
+</html>

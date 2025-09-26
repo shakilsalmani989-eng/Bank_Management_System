@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <script src="script.js"></script>
+    <style>
+
+        .login_container
+        {
+            width: 100%;
+            height: 100vh;
+            background-color: aqua;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+        }
+
+        .login_child_container
+        {
+            width: 90vw;
+            height: 90vh;
+            background-color: rgb(114, 114, 230);
+            text-align: center;
+            border-radius: 10px;
+            border: 5px double black;
+        }
+
+        
+        form
+        {
+            margin-top: 10%;
+            margin-bottom: -8%;
+        }
+
+        input
+        {
+           height: 6vh;
+           width: 15vw;
+           border-radius: 10px;
+           border: none;
+           text-align: center;
+           font-size: 1.2rem;
+           font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #loginemail
+        {
+            margin-right: 15%;
+        }
+
+        label
+        {
+            font-size: 1.5rem;
+        }
+        /*button
+        {
+            margin-top: 10%;
+            font-size: 1.5rem;
+            border-radius: 10px;
+            border: none;
+            background-color: black;
+            color: white;
+
+        }*/
+
+        #out_button
+        {
+            margin-top: 10px;
+        }
+
+        button
+        {
+            margin: 8%;
+            font-size: 1.5rem;
+            border-radius: 10px;
+            border: none;
+            background-color: black;
+            color: white;
+        }
+
+        button:hover
+        {
+                border: 3px solid white;
+                background-color: black;
+                color: white;
+                font-style: italic;
+                font-family:Georgia, 'Times New Roman', Times, serif;
+                cursor: pointer;
+        }
+
+        @media(max-width:600px)
+        {
+            .login_container
+            {
+                background-color: white;
+            }
+
+            .login_child_container
+            {
+                height: 95%;
+                width: 100%;
+                background-color: black;
+                border: 20px double white;
+            }
+
+            h1
+            {color: yellow;}
+
+            form{
+                margin-top: 80px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            label{
+                color: white;
+            }
+
+            input
+            {
+             margin-bottom: 20%;   
+             width: 80vw;
+             font-size: 1.5rem;
+             font-style: italic;
+            }
+
+            #loginemail{
+                margin-right: -0%;
+             }
+
+            button{
+                background-color: white;
+                color: black;
+            }
+
+           button:hover
+            {
+                border: 3px solid white;
+                background-color: black;
+                color: white;
+                font-style: italic;
+                font-family:Georgia, 'Times New Roman', Times, serif;
+                cursor: pointer;
+            }
+        }
+
+    </style>
+   
+</head>
+<body>
+
+    <div class="login_container">
+
+        <div class="login_child_container">
+            <h1>Login Account</h1>
+            <form id="loginaccount" onsubmit="return loginuser()">
+
+                <label id="emaillabel">Email</label>
+                <input type="email" id="loginemail" placeholder="Enter The Email" required>
+
+                <label>Password</label>
+                <input type="text" id="loginpass" placeholder="Enter The Password" required><br>
+
+                <button type="submit">Login User</button>
+            </form>
+            <button id="out_button" onclick="window.location.href = 'create.html'">Cretae User</button>
+        </div>
+    </div>
+
+</body>
+</html>

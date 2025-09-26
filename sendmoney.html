@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snde Money To User</title>
+    <script src="script.js"></script>
+    <style>
+        *
+        {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        .money_container
+        {
+            background-image: linear-gradient(rgb(194, 16, 16),yellow,green);
+            height: 100vh;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        h1
+        {
+            color: white;
+        }
+
+        .money_first_chaild
+        {
+            background-color: black;
+            height: 80vh;
+            width: 85vw;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+        }
+
+        form
+        {
+            height: 65vh;
+            width: 85vw;
+            /*background-color: rgb(69, 229, 235);*/
+            display: grid;
+            margin-top: 20px;
+            padding-top: 10px;
+            border: 5px double white;
+            border-radius: 10px;
+        }
+
+
+        input
+        {
+            width: 15vw;
+            height: 8vh;
+            margin: auto;
+            border-radius: 5px;
+            border-left: none;
+            border-right: none;
+            border-top: none;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+        input:hover
+        {
+            background-color: black;
+            color: white;
+            border: 5px double white;
+        }
+
+        #paybutton
+        {
+            margin: auto;
+            letter-spacing: normal;
+        }
+
+        button
+        {
+            height: 7vh;
+            width: 10vw;
+            margin-top: 15px;
+            border-radius: 10px;
+            font-size: 1.5rem;
+            letter-spacing: 5px;
+            background-color: white;
+        }
+
+        button:hover
+        {
+            background-image: linear-gradient(200deg,rgb(14, 198, 204),black);
+            color: white;
+            font-size: 1.6rem;
+            border: 5px double white;
+        }
+
+        /*Mobile Desing */
+        @media(max-width:600px)
+        {
+            .money_container
+            {
+                
+                padding: 0;
+            }
+            h1
+            {
+                font-size: 1.5rem;
+                color: white;
+                padding-bottom: 5px;
+                box-shadow: 0px 10px 20px 2px yellow;
+                border-radius: 10px;
+                
+            }
+
+            .money_first_chaild
+            {
+                height: 100vh;
+                width: 100vw;
+                border-radius: 0;
+            }
+
+            form
+            {
+                height: 80vh;
+                border-bottom-color: yellow;
+            }
+
+            input{
+                width: 60vw;
+            }
+
+            button{
+                width: 30vw;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div class="money_container">
+        <div class="money_first_chaild">
+            <h1>Send Money To Another User</h1>
+            <form id="send" onsubmit="return sendmoney()">
+
+                <input type="text" id="sendermobile" placeholder="Mobile Number" required><br>
+
+                <input type="text"  id="amount" placeholder="Amount" required><br>
+
+                <input type="text"  id="reciverpin" placeholder="UPI PIN" required>
+
+                <button id="paybutton" type="submit">Pay</button>
+            </form>
+            <button onclick="window.location.href = 'UserDashboard.html'">Back</button>
+        </div>
+    </div>
+
+</body>
+</html>

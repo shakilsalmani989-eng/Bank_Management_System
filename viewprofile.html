@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Profile</title>
+    <link rel="stylesheet" href="style.css">
+    
+    
+</head>
+<body>
+    
+    <div class="view_container">
+        <h1>Your profile</h1>
+        <div class="view_first_child">
+            <table border="2" cellpadding="20" cellspacing="10" id="tabledata">
+                <tr>
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th>Date Of Birth</th>
+                    <th>Gender</th>
+                    <th>Mobile Number</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>UPI Pin</th>
+                    
+                </tr>
+            </table>
+            <button id="backbutton" onclick="window.location.href = 'UserDashboard.html'">Back</button>
+        </div>
+    </div>
+
+    <script>
+        let insert = JSON.parse(localStorage.getItem("loginuser"));
+
+    if(insert)
+    {
+        let table = document.getElementById("tabledata");
+        let newrow = table.insertRow();
+
+    newrow.innerHTML = 
+    `
+    <td>${insert.fname}</td>
+    <td>${insert.lname}</td>
+    <td>${insert.dob}</td>
+    <td>${insert.gender}</td>
+    <td>${insert.mobile}</td>
+    <td>${insert.email}</td>
+    <td>${insert.password}</td>
+    <td>${insert.pin}</td>
+    `;
+    }
+    else
+    {
+        window.location.href = "login.html"
+    }
+    </script>
+</body>
+</html>
